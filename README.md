@@ -1,6 +1,3 @@
----
-output: html_document
----
 # SeeDs data some potential project ideas
 
 ## Data description
