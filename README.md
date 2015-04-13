@@ -36,7 +36,7 @@ Let us grab climate data from [here](http://www.worldclim.org/current) and condu
 Compute the relatedness of the Ames Inbred lines (N = 2,000) with SeeDs data. The results will enable us to investigate the following questions?
 
 - The origin of the modern maize relative to the diverse landraces.
-- The under-repsented landraces?
-- The enrichment of the climate and local adaptation alleles in these under-repsented landraces?
+- The underrepresented landraces?
+- The enrichment of the climate and local adaptation alleles in these underrepresented landraces?
 
 
