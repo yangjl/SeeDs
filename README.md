@@ -13,7 +13,7 @@ The idea here is that the selection gradient may end up being a net 0 for a set 
 
 - Look at SNPs for GWAS - Alberto's paper.
 - Does balancing or directional selection predominate through time on alleles that are affiliated with a fitness correlate early flowering?
-- Track change in allele frequency affiliated with a given GWAS SNP for flowering time or whatever else Alberto measured through time $\frac{df_{A}}{dt}=sf_{A}(1-f_{A})$
+- Track change in allele frequency affiliated with a given GWAS SNP for flowering time or whatever else Alberto measured through time $$\frac{df_{A}}{dt}=sf_{A}(1-f_{A})$$
 
 We'll have to correct for population structure, and correlated temporal measurements - or just treat each year as a separate generation.
 
@@ -22,3 +22,21 @@ Assess the movement of alleles associated with flowering time and their movement
 
 ## Qx?
 Should we try it out here? 
+
+
+## Scan for Climate and local adaptation
+
+Let us grab climate data from [here](http://www.worldclim.org/current) and conduct GWAS on them. We can follow the below papers for further interpretation.
+
+[Fournier-Level et al, 2011](http://www.ncbi.nlm.nih.gov/pubmed/21980109)  
+[Hancock  et al, 2011](http://www.ncbi.nlm.nih.gov/pubmed/21980108)
+
+## Origin of the modern maize
+
+Compute the relatedness of the Ames Inbred lines (N = 2,000) with SeeDs data. The results will enable us to investigate the following questions?
+
+- The origin of the modern maize relative to the diverse landraces.
+- The under-repsented landraces?
+- The enrichment of the climate and local adaptation alleles in these under-repsented landraces?
+
+
