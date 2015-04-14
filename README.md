@@ -2,10 +2,21 @@
 
 ## Data description
 
-1. Some 4700 individuals
-2. 4127 with spatial coordinates and hence elevation (lat range -38 to 30)
-3. Span in dates is 1943-2010 (some years sampled more intensely than others)
-4.
+### Landrace accessions:
+1. Some 4,700 individuals
+2. **4,127** with spatial coordinates and hence elevation (lat range -38 to 30)
+3. Note 3,493 accessions are unique.
+4. Span in dates is 1943-2010 (some years sampled more intensely than others)
+
+### GBS data:
+For GWAS, the data need to be imputed. For others, imputation maybe not necessary. The statistics of the unimputed GBSv2.7:  
+1. The total number of SNPs is 729, 528; it rapidly reduced to 249,116 with MAF > 0.01 and missing rate < 0.6.  
+2. Data could be found here on *farm*:  
+```
+/group/jrigrp4/SeeData
+```
+
+### Climate data
 
 ## IDEA 1: 
 The consistency/dynamics of the selection differential $s$ (probably better to look at this) or $\beta$ (not this - selection gradient) through time on a given trait or set of alleles underlying a trait.
