@@ -50,4 +50,6 @@ Compute the relatedness of the Ames Inbred lines (N = 2,000) with SeeDs data. Th
 - The underrepresented landraces?
 - The enrichment of the climate and local adaptation alleles in these underrepresented landraces?
 
-
+## To do list Tuesday next week - April 21 st
+1. Clean the Ames and SeeDs data, possibly 55k chip for teosinte parviglumis and mexicana - **Jinliang**
+2. Climate data - **KATE** - store on shared drive.
