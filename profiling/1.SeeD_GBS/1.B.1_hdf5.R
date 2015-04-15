@@ -12,6 +12,7 @@ install.packages("devtools")
 install.packages("methods")
 install.packages("Rcpp")
 
+library("devtools")
+
 install_github("vsbuffalo/tasselr")
 
-library("devtools")
