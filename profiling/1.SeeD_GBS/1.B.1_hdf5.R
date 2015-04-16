@@ -13,14 +13,15 @@ write.table(ames$FullName, "data/Taxa_ames_3324.txt", row.names=FALSE, col.names
 
 table(ames$Project)
 
+
+#####
+source("~/Documents/Github/zmSNPtools/Rcodes/setUpslurm.R")
+
 codechunk <- paste("module load gcc jdk/1.8 tassel/5",
-                   "run_pipeline.pl -h5 /group/jrigrp4/AllZeaGBSv2.7impV5/ZeaGBSv27_publicSamples_imputedV5_AGPv2-150114.h5 
--export /group/jrigrp4/AllZeaGBSv2.7impV5/ZeaGBSv27_publicSamples_imputedV5_AGPv2-150114_ames.hmp -exportType Hapmap 
+                   "run_pipeline.pl -h5 /group/jrigrp4/AllZeaGBSv2.7impV5/ZeaGBSv27_publicSamples_imputedV5_AGPv2-150114.h5 \\ 
+-export /group/jrigrp4/AllZeaGBSv2.7impV5/ZeaGBSv27_publicSamples_imputedV5_AGPv2-150114_ames.hmp -exportType Hapmap \\
 -includeTaxaInfile data/Taxa_ames_3324.txt",
                    sep="\n")
-
-
-source("~/Documents/Github/zmSNPtools/Rcodes/setUpslurm.R")
 
 setUpslurm(slurmsh="slurm-scripts/run_h5_hmp.sh",
            codesh= codechunk,
