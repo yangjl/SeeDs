@@ -31,6 +31,8 @@ Let us grab climate data from [here](http://www.worldclim.org/current) and condu
 [Fournier-Level et al, 2011](http://www.ncbi.nlm.nih.gov/pubmed/21980109)  
 [Hancock  et al, 2011](http://www.ncbi.nlm.nih.gov/pubmed/21980108)
 
+Some additional thoughts on these studies - common gardens employed, trait data measured (these are things we don't have). How to get around this?
+
 ## Origin of the modern maize
 
 Compute the relatedness of the Ames Inbred lines (N = 2,000) with SeeDs data. The results will enable us to investigate the following questions?
