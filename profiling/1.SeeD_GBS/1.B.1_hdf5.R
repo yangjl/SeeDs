@@ -11,28 +11,55 @@ table(allzea$GermplasmSet)
 ames <- subset(allzea, GermplasmSet %in% "Ames" & Project != "Imputation Test")
 write.table(ames$FullName, "data/Taxa_ames_3324.txt", row.names=FALSE, col.names=FALSE, quote=FALSE, sep="\t")
 
+
 table(ames$Project)
+table(ames$GermplasmSet)
+
 
 
 #####
 source("~/Documents/Github/zmSNPtools/Rcodes/setUpslurm.R")
 
 codechunk <- paste("module load gcc jdk/1.8 tassel/5",
-                   "run_pipeline.pl -h5 /group/jrigrp4/AllZeaGBSv2.7impV5/ZeaGBSv27_publicSamples_imputedV5_AGPv2-150114.h5 \\ 
--export /group/jrigrp4/AllZeaGBSv2.7impV5/ZeaGBSv27_publicSamples_imputedV5_AGPv2-150114_ames.hmp -exportType Hapmap \\
--includeTaxaInfile data/Taxa_ames_3324.txt",
-                   sep="\n")
+                   ### dump as hmp
+                   paste(
+"run_pipeline.pl -Xmx64g -h5 /group/jrigrp4/AllZeaGBSv2.7impV5/ZeaGBSv27_publicSamples_imputedV5_AGPv2-150114.h5", 
+"-export /group/jrigrp4/AllZeaGBSv2.7impV5/ZeaGBSv27_publicSamples_imputedV5_AGPv2-150114 -exportType Hapmap"), 
+                   ### sort it
+                    paste("run_pipeline.pl -Xmx64g -SortGenotypeFilePlugin -inputFile /group/jrigrp4/AllZeaGBSv2.7impV5/ZeaGBSv27_publicSamples_imputedV5_AGPv2-150114.hmp.txt",
+                          "-outputFile /group/jrigrp4/AllZeaGBSv2.7impV5/ZeaGBSv27_sorted -fileType Hapmap")
+                          
+                    )
+
+#first you'll need to sort the GBS 2.7 - this takes awhile (1 hour) - so just copy my version from here:/group/jrigrp4/Justin_Kate/GBS2.7
+# 'sortedGBS.hmp.txt' - if you want to do it yourself
+run_pipeline.pl -Xmx64g -SortGenotypeFilePlugin -inputFile AllZeaGBSv2.7_publicSamples_imputedV3b_agpv3.hmp.gz -outputFile sortedGBS -fileType Hapmap
+
+# for GBS 2.7, the "keep_list_NAM_children.txt" is just a one column list of GBS runs I want to keep
+run_pipeline.pl -Xmx64g -fork1 -h ZeaGBSv27_sorted.hmp.txt -includeTaxaInfile /home/jolyang/Documents/Github/SeeDs/data/Taxa_ames_3324.txt -export ZeaGBSv27_Ames -exportType Hapmap -runfork1
+
+# to export - whatever the hdf5 file is - if you want plink -'Plink' or 'Hapmap' for hmp
+run_pipeline.pl -Xmx64g -fork1 -h5 $file -export -exportType VCF -runfork1
+
+module load gcc jdk/1.8 tassel/5
+run_pipeline.pl -Xmx64g -h5 ZeaGBSv27_publicSamples_imputedV5_AGPv2-150114.h5 -export Zea_Ames -exportType Hapmap -includeTaxaInfile /home/jolyang/Documents/Github/SeeDs/data/Taxa_ames_3324.txt
+
+
+
+sep="\n")
 
 setUpslurm(slurmsh="slurm-scripts/run_h5_hmp.sh",
            codesh= codechunk,
            wd=NULL, jobid="hdf5-hmp", email=TRUE)
 
+--get-user-env
 
 
+row5 <- read.table("ZeaGBSv27_publicSamples_imputedV5_AGPv2-150114.hmp.txt", sep="\t", skip=1,
+                   comment.char = "#", nrows=5, header=TRUE)
 
-
-
-
+install.packages("data.table")
+library(data.table)
 
 
 #######
@@ -61,8 +88,6 @@ module load gcc jdk/1.8 tassel/5
 #run_pipeline.pl -Xmx64g -fork1 
 run_pipeline.pl -hdf5Schema /group/jrigrp4/AllZeaGBSv2.7impV5/ZeaGBSv27_publicSamples_imputedV5_AGPv2-150114.h5 -export /group/jrigrp4/AllZeaGBSv2.7impV5/schema.txt
 
-
--­includeTaxaInFi efile
 
 
 module load gcc jdk/1.8 tassel/5
