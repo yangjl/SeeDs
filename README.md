@@ -33,6 +33,9 @@ Let us grab climate data from [here](http://www.worldclim.org/current) and condu
 
 Some additional thoughts on these studies - common gardens employed, trait data measured (these are things we don't have). How to get around this?
 
+## Further idea for pop. structure/outlier alleles of interest
+[Duforet-Frebourg et al. 2015 preprint pca-adapt](http://arxiv.org/abs/1504.04543)
+
 ## Origin of the modern maize
 
 Compute the relatedness of the Ames Inbred lines (N = 2,000) with SeeDs data. The results will enable us to investigate the following questions?
