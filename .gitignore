@@ -13,3 +13,4 @@ vignettes/*.pdf
 README.html
 largedata/
 packrat/lib*/
+slurm-log/

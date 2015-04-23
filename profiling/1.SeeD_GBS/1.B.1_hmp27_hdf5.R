@@ -9,7 +9,11 @@ table(allzea$Project)
 table(allzea$GermplasmSet)
 
 ames <- subset(allzea, GermplasmSet %in% "Ames" & Project != "Imputation Test")
-write.table(ames$FullName, "data/Taxa_ames_3324.txt", row.names=FALSE, col.names=FALSE, quote=FALSE, sep="\t")
+
+ames$taxa <- paste(ames$DNASample, ames$LibraryPrepID, sep=":")
+write.table(ames$taxa, "data/Taxa_ames_3324.txt", row.names=FALSE, col.names=FALSE, quote=FALSE, sep="\t")
+
+idx <- grep("250007467", allzea$FullName)
 
 
 table(ames$Project)
@@ -55,8 +59,7 @@ setUpslurm(slurmsh="slurm-scripts/run_h5_hmp.sh",
 --get-user-env
 
 
-row5 <- read.table("ZeaGBSv27_publicSamples_imputedV5_AGPv2-150114.hmp.txt", sep="\t", skip=1,
-                   comment.char = "#", nrows=5, header=TRUE)
+test <- read.delim("head100.txt", sep="\t",  header=TRUE)
 
 install.packages("data.table")
 library(data.table)
