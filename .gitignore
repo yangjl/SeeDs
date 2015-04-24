@@ -5,6 +5,8 @@
 *-Ex.R
 # RStudio files
 .Rproj.user/
+.RData
+.Rprofile
 # produced vignettes
 vignettes/*.html
 vignettes/*.pdf
@@ -14,3 +16,5 @@ README.html
 largedata/
 packrat/lib*/
 slurm-log/
+slurm-scripts/
+packrat/src/
