@@ -60,6 +60,15 @@ Compute the relatedness of the Ames Inbred lines (N = 2,000) with SeeDs data. Th
 * inversion popgen (see ideas in Fang et al. and Pyäjärvi et al.)
 * SCAT to localize domestication location better than in van Heerwaarden 2011?
 
+### Quantgen vs. popgen approaches to contemporary evolution - KC
+Something more to consider here is that I'm approaching this from an almost total quantgen/micro evol. perspective. I view this dataset as being valuable in the "contemporary evolutionary rate" sense.  Interested to look at the dynamics of _s_ and $beta$ through time, but perhaps what might be neat is getting an estimate of s/beta using both types of approaches (e.g. Mathieson, perhaps some way of pulling it out of Bayenv). Do you get similar estimates of s? Why? Why not? Does s approach 0 for some traits through time, but not others? Why? Why not? What does this say about macro/micro evolutionary rates of evolution via selection? 
+
+Some relevant papers to consider (some are old classics, but others new) with respect to the pace of selection/evolution by selection:
+[Ellner et al. 2011](http://onlinelibrary.wiley.com/doi/10.1111/j.1461-0248.2011.01616.x/full)
+[Hendry and Kinnison 1999](http://www.jstor.org/stable/2640428?seq=1#page_scan_tab_contents)
+[Kinnison and Hendry 2001](http://link.springer.com/chapter/10.1007/978-94-010-0585-2_10)
+[Morrissey and Hadfield 2012](http://onlinelibrary.wiley.com/doi/10.1111/j.1558-5646.2011.01444.x/full)
+
 #### Caveats
 
 We need clear hypotheses.  Pyäjärvi lacked these, and then unless we find something super awesome, we're left with a very descriptive paper of less interest. What are these? We will find SNPs with Bayenv, we will find traits under selection with SQuaT, and we will find admixture with Spacemix.  So what? 
