@@ -5,7 +5,7 @@
 1. Some 4700 individuals
 2. 4127 with spatial coordinates and hence elevation (lat range -38 to 30)
 3. Span in dates is 1943-2010 (some years sampled more intensely than others)
-4.
+
 
 ## IDEA 1: 
 The consistency/dynamics of the selection differential $s$ (probably better to look at this) or $\beta$ (not this - selection gradient) through time on a given trait or set of alleles underlying a trait.
@@ -44,4 +44,23 @@ Compute the relatedness of the Ames Inbred lines (N = 2,000) with SeeDs data. Th
 - The underrepresented landraces?
 - The enrichment of the climate and local adaptation alleles in these underrepresented landraces?
 
+## JRI Ideas
+
+#### Coop it up.
+
+* Bedassle (through time) in coordination with Bradburd: identify important environmental variables.  
+* Bayenv: find loci associting with environment.  
+* SQuaT: find phenotypes from 44 NAM traits showing selection  
+* Spacemix: use mexicana and parviglumis GBS samples to look for gene flow?
+
+#### Popgen
+
+* effect size of SNPs and allele frequency  
+* GERP and spatial distribution (GERP SNPs limited in space as expected if deleterious?)
+* inversion popgen (see ideas in Fang et al. and Pyäjärvi et al.)
+* SCAT to localize domestication location better than in van Heerwaarden 2011?
+
+#### Caveats
+
+We need clear hypotheses.  Pyäjärvi lacked these, and then unless we find something super awesome, we're left with a very descriptive paper of less interest. What are these? We will find SNPs with Bayenv, we will find traits under selection with SQuaT, and we will find admixture with Spacemix.  So what? 
 
