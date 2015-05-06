@@ -15,6 +15,14 @@ For GWAS, the data need to be imputed. For others, imputation maybe not necessar
 ```
 /group/jrigrp4/SeeData
 ```
+3. A common set of SNPs shared between SeeDs and Ames in AGPv2
+Note SeeDs in diploid and Ames in haploid formats.
+```
+### SeeDs
+/group/jrigrp4/SeeData/SeeDs_common_525k.bed5
+### Ames
+/group/jrigrp4/SeeData/Ames_common_525k.bed5
+```
 
 ## IDEA 1: 
 The consistency/dynamics of the selection differential $s$ (probably better to look at this) or $\beta$ (not this - selection gradient) through time on a given trait or set of alleles underlying a trait.

@@ -5,7 +5,7 @@
 chrfrq <- function(){
     chr <- data.frame()
     for(i in 1:10){
-        tem <- read.table(paste0("largedata/chr", i, "_filetered_unimputed.frq"), header=TRUE)
+        tem <- read.table(paste0("/group/jrigrp4/SeeData/chr", i, "_filetered_unimputed.frq"), header=TRUE)
         chr <- rbind(chr, tem)
     }
     return(chr)
