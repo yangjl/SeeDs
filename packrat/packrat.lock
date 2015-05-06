@@ -29,6 +29,18 @@ Source: CRAN
 Version: 0.6.8
 Hash: 89dc4c8734dad5322bb3c5c2af09056f
 
+Package: fields
+Source: CRAN
+Version: 8.2-1
+Requires: maps, spam
+Hash: 6376bca998f2ad37c527831807366edb
+
+Package: Geneland
+Source: CRAN
+Version: 4.0.5
+Requires: fields, RandomFields
+Hash: 384513af0edb7eb45c37fa780483b5ac
+
 Package: geosphere
 Source: CRAN
 Version: 1.3-13
@@ -93,6 +105,12 @@ Package: proto
 Source: CRAN
 Version: 0.3-10
 
+Package: RandomFields
+Source: CRAN
+Version: 3.0.62
+Requires: sp
+Hash: 138c15f42b8564fcb9b0ec8d60b4a01a
+
 Package: RColorBrewer
 Source: CRAN
 Version: 1.1-2
@@ -128,6 +146,11 @@ Requires: dichromat, labeling, RColorBrewer, munsell, plyr
 Package: sp
 Source: CRAN
 Version: 1.0-17
+
+Package: spam
+Source: CRAN
+Version: 1.0-1
+Hash: 93c30ed45a309377f3059db3c76c94df
 
 Package: stringr
 Source: CRAN
