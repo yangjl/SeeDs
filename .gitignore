@@ -17,5 +17,4 @@ largedata/
 packrat/lib*/
 slurm-log/
 slurm-scripts/
-packrat/src/
 *.html
